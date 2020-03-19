@@ -1,0 +1,27 @@
+{
+  "name": "learning-ts",
+  "version": "1.0.0",
+  "description": "Learning TypeScript with the course \"Entendendo TypeScript\" by Cod3r Udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thalysonalexr/learning-ts.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "TS",
+    "Learning"
+  ],
+  "author": "Thalyson Alexandre Rodrigues de Sousa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thalysonalexr/learning-ts/issues"
+  },
+  "homepage": "https://github.com/thalysonalexr/learning-ts#readme",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
