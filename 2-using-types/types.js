@@ -1,25 +1,25 @@
 "use strict";
 // inference type
-var myname = 'thalyson'; // string
-var age = 23; // number
-var height = 1.75; // number
-var isadmin = true; // boolean
+let myname = 'thalyson'; // string
+let age = 23; // number
+let height = 1.75; // number
+let isadmin = true; // boolean
 console.log(myname);
 console.log(age);
 console.log(height);
 console.log(isadmin);
 // explicit type
-var anywhere = 'Hello!';
-var booleantype = false;
-var numbertype = 12.2;
-var stringtype = 'Yes!';
-var hobbies = ['Cozinhar', 'Praticar Esportes']; // array type any
+let anywhere = 'Hello!';
+let booleantype = false;
+let numbertype = 12.2;
+let stringtype = 'Yes!';
+let hobbies = ['Cozinhar', 'Praticar Esportes']; // array type any
 console.log(hobbies[0]); // Cozinhar
 console.log(typeof hobbies[0]); // string
 hobbies = [100, 200, 300];
 console.log(hobbies); // [100, 200, 300]
 // tuples
-var endereco = ['Av. Principal', 99];
+let endereco = ['Av. Principal', 99];
 endereco.push('Street Important', 1280);
 console.log(endereco); // ['Av. Principal', 99, 'Street Important', 1280]
 // enums
@@ -32,11 +32,11 @@ var Color;
     Color[Color["Yellow"] = 12] = "Yellow";
     Color[Color["Red"] = 10] = "Red"; // 10
 })(Color || (Color = {}));
-var myColor = Color.Green;
+let myColor = Color.Green;
 console.log(myColor);
 console.log(Color);
 // any
-var carro = 'BMW';
+let carro = 'BMW';
 console.log(carro);
 carro = { name: 'BMW', year: 2020 };
 console.log(carro);
@@ -54,34 +54,34 @@ function multiply(numA, numB) {
 }
 console.log(multiply(2, 5));
 // functions like types
-var calc;
+let calc;
 calc = multiply;
 console.log(calc(12, 24));
 // objects
-var user = {
+let user = {
     name: 'Joao',
     age: 12
 };
 console.log(user);
 // chalenge 1
-var employee = {
+let employee = {
     supervisors: ['Thalyson', 'John', 'Maria'],
-    hitPoint: function (hour) { return hour <= 8 ? 'Normal point' : 'Out of hours'; }
+    hitPoint: (hour) => hour <= 8 ? 'Normal point' : 'Out of hours'
 };
 console.log(employee.supervisors);
 console.log(employee.hitPoint(8));
 console.log(employee.hitPoint(9));
-var employee2 = {
+let employee2 = {
     supervisors: ['Maria', 'Fernanda', 'Gabriela'],
-    hitPoint: function (hour) { return hour <= 8 ? 'Normal point' : 'Out of hours'; }
+    hitPoint: (hour) => hour <= 8 ? 'Normal point' : 'Out of hours'
 };
 // union types
-var note = 10;
+let note = 10;
 console.log(note);
 note = '10';
 console.log(note);
 // check type in runtime
-var value = 30;
+let value = 30;
 if (typeof value === 'number') {
     console.log('Is number');
 }
@@ -92,10 +92,10 @@ else {
 function fail(message) {
     throw new Error(message);
 }
-var product = {
+const product = {
     name: 'Sabão',
     price: -1,
-    validateProduct: function () {
+    validateProduct() {
         if (!this.name || this.name.trim().length === 0) {
             fail('Need have a name');
         }
@@ -104,16 +104,17 @@ var product = {
         }
     }
 };
-var accountBank = {
+const accountBank = {
     balance: 3456,
-    deposite: function (value) {
+    deposite(value) {
         this.balance += value;
     }
 };
-var accountHolder = {
+const accountHolder = {
     name: 'Ana Silva',
-    accountBank: accountBank,
+    accountBank,
     contacts: ['34567890', '98765432']
 };
 accountHolder.accountBank.deposite(3000);
 console.log(accountHolder);
+//# sourceMappingURL=types.js.map
