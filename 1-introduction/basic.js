@@ -1,5 +1,5 @@
 "use strict";
-var a = 'Hello World!';
+const a = 'Hello World!';
 console.log(a);
 // yarn tsc --init > create file tsconfig.json
 // yarn tsc introduction/basic.ts > transpile file .ts to .js
@@ -10,3 +10,4 @@ console.log(a);
 // use Ctrl + Alt + N to run file TS
 // execute with browser
 // yarn tsc -w > listening files .ts
+//# sourceMappingURL=basic.js.map
